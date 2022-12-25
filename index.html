@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Geeks Maze</title>
+</head>
+<body>
+    <div class="board welcome">
+        <div>To play click on start</div>
+        <button onclick="startGame()">▶ Play</button>
+    </div>
+    <div class="timer-board cached">
+        <div class="timer">00:00</div>
+        <div class="button-containers">
+            <div class="game-button" onclick="pauseGame(event)">⏸</div>
+            <div class="game-button" onclick="replayGame()">🔁</div>
+            <div class="game-button" onclick="location.reload()">⏹</div>
+        </div>
+    </div>
+    <div class="game-board cached"></div>
+    <div class="board win-result cached">
+        <div>You win!!!</div>
+        <div class="result-details" id="score"></div>
+        <div class="result-details" id="time"></div>
+        <button onclick="replayGame()">⟳ Replay</button>
+    </div>
+    <div class="board lose-result cached">
+        <div>You Lose!!!</div>
+        <button onclick="replayGame()">⟳ Replay</button>
+    </div>
+</body>
+<script src="./scripts/audio.js"></script>
+<script src="./scripts/definitions.js"></script>
+<script src="./scripts/drawer.js"></script>
+<script src="./scripts/main.js"></script>
+</html>
